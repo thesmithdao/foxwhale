@@ -1,4 +1,4 @@
-Twitter Crypto Whale Bot
+## Twitter Crypto Whale Bot
 
 FOX Whale filters out transfers that have a value of 100,000 or more $FOX using the GraphQL API and creates a tweet with the transfer information. This script schedules the fetch_data function to run three times a day at specified times to continuously post tweets that meet the criteria. 
 
