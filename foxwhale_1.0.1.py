@@ -52,7 +52,7 @@ def fetch_data():
             api.update_status(tweet_text)
             tweet_count += 1
         if tweet_count >= 2:
-            break
+            return
 
 schedule.every().day.at("06:00").do(fetch_data)
 schedule.every().day.at("12:00").do(fetch_data)
