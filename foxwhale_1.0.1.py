@@ -46,7 +46,7 @@ def fetch_data():
     tweet_count = 0
 
     for transfer in transfers:
-        if int(transfer['value']) >= 100000000:
+        if int(transfer['value']) >= 99999999999999999999999:
             transfer_value = "{:,.2f}".format(int(float(transfer['value'])) / 10**18)
             tweet_text = f"🚨🐋 Whale Alert! A transfer of {transfer_value} $FOX 🦊 was made from {transfer['from'][:4]}...{transfer['from'][-3:]} to {transfer['to'][:4]}...{transfer['to'][-3:]}. https://etherscan.com/tx/{transfer['transactionHash']} 🤖"
             api.update_status(tweet_text)
