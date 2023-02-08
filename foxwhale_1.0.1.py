@@ -53,7 +53,7 @@ def fetch_data():
                 api.update_status(tweet_text)
                 tweet_count += 1
             except tweepy.errors.Forbidden:
-                print("Error: Tweet is a duplicate.")
+                print("Error: Tweet is duplicated.")
             if tweet_count >= 2:
                 return
 
