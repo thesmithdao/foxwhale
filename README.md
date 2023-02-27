@@ -7,3 +7,5 @@ Fetching data from dev graphql url: https://api.studio.thegraph.com/query/34429/
 Use case: https://twitter.com/FOXWhale_bot (beta stage)
 
 **Unofficial Globalization Workstream experiment**
+
+donations: defismith.eth
