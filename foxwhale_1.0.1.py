@@ -36,7 +36,7 @@ def fetch_data():
     }
 
     request = requests.post(
-        "https://gateway.thegraph.com/api/[FOX-API]/subgraphs/id/GvJCEpMuyymPEYJ8dLWvKFtBy1sz3bywdRSPzfY46MDR",
+        "https://api.studio.thegraph.com/query/34429/shapeshift-fox-token/v1.0.1",
         headers=headers,
         json={"query": query}
     )
@@ -46,9 +46,9 @@ def fetch_data():
     tweet_count = 0
 
     for transfer in transfers:
-        if int(transfer['value']) >= 500000000000000000000000:
+        if int(transfer['value']) >= 250000000000000000000000:
             transfer_value = "{:,.2f}".format(int(transfer['value']) / 10**18)
-            tweet_text = f"🚨🐋 Whale Alert! A transfer of {transfer_value} $FOX 🦊 was made from {transfer['from'][:4]}...{transfer['from'][-3:]} to {transfer['to'][:4]}...{transfer['to'][-3:]}. https://etherscan.com/tx/{transfer['transactionHash']} 🤖"
+            tweet_text = f"Whale Alert! A transfer of {transfer_value} $FOX  was made from {transfer['from'][:4]}...{transfer['from'][-3:]} to {transfer['to'][:4]}...{transfer['to'][-3:]}. https://etherscan.com/tx/{transfer['transactionHash']}"
             try:
                 api.update_status(tweet_text)
                 tweet_count += 1
